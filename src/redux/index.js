@@ -12,6 +12,7 @@ const store = createStore(
   applyMiddleware(sagaMiddleware)
 );
 //tes github
+//deploy
 
 sagaMiddleware.run(rootSaga);
 
