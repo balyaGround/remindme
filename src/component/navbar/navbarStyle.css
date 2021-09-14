@@ -122,7 +122,8 @@
 
 .content a:active .arrow,
 .content a:focus .arrow,
-.content a:hover .arrow {
+.content a:hover .arrow,
+.content a:visited .arrow {
   display: inline-flex;
 }
 .content a:active p,
