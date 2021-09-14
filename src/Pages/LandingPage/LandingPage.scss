@@ -281,14 +281,10 @@
   }
 }
 
-@media (max-width: 1440px) {
-  
-}
-
 @media (min-width: 1441px) {
   .landing__header {
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-around;
     flex-direction: row;
     align-content: space-between;
 
