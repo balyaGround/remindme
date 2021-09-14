@@ -41,10 +41,28 @@
   color: white;
 }
 
+.sidebarItems.content a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin-top: 2rem;
+}
+
+.sidebarItems.content p {
+  padding-top: 1rem;
+  padding-right: 4rem;
+  margin-right: 2rem;
+}
+
 .sidebarItems a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -75,9 +93,11 @@
 .content {
   border-bottom: 1px solid #625bad;
 }
+
+.content a:active,
+.content a:focus,
 .content a:hover {
   color: #342d50;
-  border-bottom: 1px solid #625bad;
 }
 
 .Logout {
@@ -96,3 +116,17 @@
   cursor: pointer;
 }
 
+.content .arrow {
+  display: none;
+}
+
+.content a:active .arrow,
+.content a:focus .arrow,
+.content a:hover .arrow {
+  display: inline-flex;
+}
+.content a:active p,
+.content a:focus p,
+.content a:hover p {
+  margin-left: 1.72rem;
+}

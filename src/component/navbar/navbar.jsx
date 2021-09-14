@@ -6,11 +6,11 @@ import { getUser } from "../../redux/action/user";
 import logout from "../../assets/images/logout.png";
 import "./navbarStyle.css";
 import * as FiIcons from "react-icons/fi";
+import * as FaIcons from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { changeStep } from "../../redux/action/global";
 // import { getTheToken, getMessage  } from "./firebase";
 // import axios from "axios";
-
 
 function Navbar({ ...props }) {
   // eslint-disable-next-line no-unused-vars
@@ -20,23 +20,22 @@ function Navbar({ ...props }) {
 
   // getTheToken()
   // getMessage()
-  
-  
+
   function LogOut() {
     localStorage.clear();
     window.location.replace("/");
   }
   // const regToken = localStorage.getItem("Registration Token");
   // const Token = localStorage.getItem("Token");
- 
-//   const sendRegToken = async (e) => {
-//     try {
-//         await axios.post(`https://remindme.gabatch13.my.id/api/v1/notify/subscribe`, {token : regToken}, { headers: { Authorization: `Bearer ${Token}` } }); 
-//     } catch (error) {
-//         console.log({ error })
-//     }
-// }
-// const [page, setPage] = useState (false)
+
+  //   const sendRegToken = async (e) => {
+  //     try {
+  //         await axios.post(`https://remindme.gabatch13.my.id/api/v1/notify/subscribe`, {token : regToken}, { headers: { Authorization: `Bearer ${Token}` } });
+  //     } catch (error) {
+  //         console.log({ error })
+  //     }
+  // }
+  // const [page, setPage] = useState (false)
   useEffect(() => {
     dispatch(getUser());
   }, [dispatch]);
@@ -72,18 +71,18 @@ function Navbar({ ...props }) {
             <h5 style={{ marginTop: "5px", marginLeft: "4px" }}>Create Note/Goals</h5>
           </div>
           <div className="sidebarItems content">
-            <Link to="/allNote" >
-            <p>All Notes</p> {window.location === '/allNote' ?  <h1>panah</h1> : null }
+            <Link to="/allNote">
+              <p>All Notes</p> <FaIcons.FaArrowRight className="arrow" />
             </Link>
           </div>
           <div className="sidebarItems content">
             <Link to="/allGoals">
-              <p>All Goals</p>
+              <p>All Goals</p> <FaIcons.FaArrowRight className="arrow" />
             </Link>
           </div>
           <div className="sidebarItems content">
             <Link to="/profile">
-              <p>My Profile</p>
+              <p>My Profile</p> <FaIcons.FaArrowRight className="arrow" />
             </Link>
           </div>
         </div>
